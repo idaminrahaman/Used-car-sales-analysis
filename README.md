@@ -65,7 +65,7 @@ Conducted SQL-based EDA to uncover patterns and relationships:
 | load_data.sql | Data import and initial setup |
 | data_cleaning.sql | Data cleaning and preprocessing steps |
 | eda.sql | Exploratory data analysis queries |
-| final_analysis.sql | Business insights and advanced queries |
+
 
 ---
 
