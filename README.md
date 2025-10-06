@@ -61,6 +61,7 @@ Conducted SQL-based EDA to uncover patterns and relationships:
 ## Files Included
 | File Name | Description |
 |------------|-------------|
+| main_file.csv | The file containing raw data |
 | schema.sql | Database and table creation scripts |
 | load_data.sql | Data import and initial setup |
 | data_cleaning.sql | Data cleaning and preprocessing steps |
