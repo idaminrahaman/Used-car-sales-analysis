@@ -229,4 +229,12 @@ WHERE brand_name = ''
    OR city = ''
    OR power_unit = '';
 
+UPDATE sales_analysis
+SET insurance = 'Not Available'
+WHERE insurance IS NULL;
+
+UPDATE sales_analysis
+SET insurance = 'Third Party'
+WHERE insurance IN ('Third Party Insurance', 'third party', 'Third party');
+
 ------------------------END OF PAGE----------------------------
