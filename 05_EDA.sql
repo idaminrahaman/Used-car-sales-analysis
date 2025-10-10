@@ -81,12 +81,8 @@ FROM sales_analysis
 GROUP BY cc_bucket
 ORDER BY MIN(engine_capacity_cc);
 
--- Set engine capacity = NULL for electric vehicles
-UPDATE sales_analysis
-SET engine_capacity_cc = NULL
-WHERE fuel_type = 'Electric';
 
--- Check min and max engine capacity after cleanup
+-- Check min and max engine capacity 
 SELECT 
     MIN(engine_capacity_cc) AS min_cc,
     MAX(engine_capacity_cc) AS max_cc
@@ -100,20 +96,12 @@ SELECT
     ROUND(SUM(max_power IS NULL) * 100.0 / COUNT(*), 2) AS pct_missing
 FROM sales_analysis;
 
--- Drop rows if missing max_power < 5%
-DELETE FROM sales_analysis
-WHERE max_power IS NULL;
-
 -- Check missing values in power_unit
 SELECT 
     COUNT(*) AS total_rows,
     SUM(power_unit IS NULL) AS missing_power,
     ROUND(SUM(power_unit IS NULL) * 100.0 / COUNT(*), 2) AS pct_missing
 FROM sales_analysis;
-
--- Drop rows if missing power_unit < 5%
-DELETE FROM sales_analysis
-WHERE power_unit IS NULL;
 
 -- Power vs. price relationship
 SELECT 
@@ -284,13 +272,5 @@ HAVING COUNT(*) >= 30
 ORDER BY avg_resale_price DESC;
 
 
-
-------------------------------------------------------------
--- VALIDATION
-------------------------------------------------------------
-
-SELECT 
-    COUNT(*) AS total_rows
-FROM sales_analysis;
 
 ------------------------- END OF FILE -------------------------
