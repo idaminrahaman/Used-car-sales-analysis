@@ -60,5 +60,4 @@ The goal is to identify key factors influencing resale value and to recommend st
 
 ## Author
 **Idamin Rahaman**  
-India
 email: idaminrahaman8@gmail.com
