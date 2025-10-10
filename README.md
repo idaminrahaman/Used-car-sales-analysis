@@ -53,10 +53,12 @@ The goal is to identify key factors influencing resale value and to recommend st
 
 ## Tools and Technologies
 - Python (Pandas, NumPy, Matplotlib, Seaborn)  
-- MySQL for database management and querying  
+- MySQL for database management and querying
+- Power BI for visual representation
 
 ---
 
 ## Author
 **Idamin Rahaman**  
 India
+email: idaminrahaman8@gmail.com
